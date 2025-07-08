@@ -1,7 +1,5 @@
-// ✅ Nama cache, bisa diganti versi kalau update
 const CACHE_NAME = 'pwa-belanja-v1';
 
-// ✅ Daftar file yang akan disimpan di cache
 const FILES_TO_CACHE = [
   '/pwa-belanja-anak-kost/',
   '/pwa-belanja-anak-kost/index.html',
@@ -12,7 +10,6 @@ const FILES_TO_CACHE = [
   '/pwa-belanja-anak-kost/icons/icon-512.png'
 ];
 
-// ✅ Proses instalasi Service Worker
 self.addEventListener('install', event => {
   console.log('[Service Worker] Install');
   event.waitUntil(
@@ -24,7 +21,6 @@ self.addEventListener('install', event => {
   self.skipWaiting();
 });
 
-// ✅ Aktivasi Service Worker, hapus cache lama
 self.addEventListener('activate', event => {
   console.log('[Service Worker] Activate');
   event.waitUntil(
@@ -42,7 +38,6 @@ self.addEventListener('activate', event => {
   self.clients.claim();
 });
 
-// ✅ Ambil file dari cache dulu, kalau gagal baru fetch ke jaringan
 self.addEventListener('fetch', event => {
   console.log('[Service Worker] Fetch', event.request.url);
   event.respondWith(
