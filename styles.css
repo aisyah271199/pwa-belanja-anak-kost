@@ -1,31 +1,20 @@
-/* Gaya dasar halaman */
 body {
   font-family: Arial, sans-serif;
-  padding: 1rem;
-  margin: 0;
+  padding: 20px;
+  background: #f7f7f7;
 }
 
 h1 {
-  text-align: center;
+  color: #4CAF50;
 }
 
-/* Daftar belanja sebagai grid */
-#shopping-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-
-.item {
-  border: 1px solid #ddd;
-  padding: 1rem;
+ul {
+  background: #fff;
+  padding: 20px;
   border-radius: 8px;
-  background: #f8f8f8;
+  list-style: none;
 }
 
-/* Layout responsif */
-@media (max-width: 600px) {
-  body {
-    padding: 0.5rem;
-  }
+ul li {
+  margin: 8px 0;
 }
