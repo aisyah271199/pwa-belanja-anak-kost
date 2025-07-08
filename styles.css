@@ -1,0 +1,31 @@
+/* Gaya dasar halaman */
+body {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Daftar belanja sebagai grid */
+#shopping-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.item {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f8f8f8;
+}
+
+/* Layout responsif */
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+}
